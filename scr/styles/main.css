@@ -1,0 +1,95 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #00008b;
+    user-select: none;  /*N DEIXA SELECIONAR COMO TEXTO*/
+}
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background: linear-gradient(325deg,#03001e 0%, #7303c0 30%, #ec38bc 70%, #03001e 100%);
+    padding: 40px 60px;
+    border-radius: 30px;
+}
+h2{
+    font-size: 3em;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+}
+
+.reset{
+    padding: 15px 20px;
+    width: 100%;
+    color: #000000;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer; /* QUANDO PASSAR O CURSOR POR CIMA ELE MOSTRAR A MÃOZINHA (MOSTRAR Q É CLICÁVEL)*/
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+.reset:hover{
+    box-shadow: 3px 3px 3px #7e7e7e;
+    transform: scale(1.1);
+    transition: all 0.2s;
+}
+.reset:focus{
+    color: #ec38bc;
+    background-color: #000000;
+    box-shadow: 3px 3px 3px #fff;
+}
+
+.game{
+    width: 430px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+
+    font-size: 3em;
+    transform: rotateY(180deg);
+    transition: all 0.5s;
+}
+
+
+.item::after{
+    content: "";
+    position: absolute;
+    inset: 0; /* SETA O PONTO ZERO DO ELEMENTO NA COR ABAIXO*/
+    background: #404040;
+    /* opacity: 0.8; */
+    transition: 0.25s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+}
+
+.boxOpen::after,
+.boxMatch::after{
+    transform: rotateY(180deg);
+}
