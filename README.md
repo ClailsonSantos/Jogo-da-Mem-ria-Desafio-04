@@ -19,8 +19,6 @@ JavaScript: Lógica do jogo, manipulação de DOM, verificação de combinaçõe
 # Como Executar o Jogo 🚀
 
 #### 1. Através do link hospedado 🌐
-Você pode jogar o jogo diretamente através do link hospedado online. Basta acessar o endereço e começar a jogar!
-
-https://clailsonsantos.github.io/Jogo-da-Mem-ria-Desafio-04/
+Você pode jogar o jogo diretamente através do link hospedado online. 
 
 #### 2. Clonando o repositório e executando localmente 💻
